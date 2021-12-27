@@ -3,3 +3,11 @@
     box-shadow: 14px 6px 15px 0px #000000;
     height: 95vh;
 }
+
+@media(max-width: 584px){
+    .contenu{
+        width: 70%;
+        height: 100%;
+        margin-left: 0;
+    }
+}

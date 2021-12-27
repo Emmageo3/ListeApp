@@ -147,7 +147,11 @@ function showApp() {
   if (AppObj.length != 0) {
     AppElm.innerHTML = html;
   } else {
-    AppElm.innerHTML = `Rien n'a été ajouté.`;
+    AppElm.innerHTML = `
+    <div class="row mt-4" style="width: 100%">
+      <h1 class="h1" style="text-align: center">Aucun apprenant n'a été ajouté</h1>
+    </div>
+    `;
   }
 }
 

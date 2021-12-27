@@ -37,9 +37,9 @@ function afficherDetail(idee){
         "beforeend",
         `
         <div class="row">
-                    <a href="liste.html">Retour</a>
+                    <a href="liste.html"><img src="./img/arrow.png" height= "25rem" width="35rem"></a>
         </div>
-        <div class="col-5 mt-4" style = "height: 19rem; " >
+        <div class="col-5 mt-1" style = "height: 19rem; " >
             <div class="row">
                 <div class="col-10">
                     <img src="" alt="" id="img" style="box-shadow: 10px 12px 29px -6px #000000;border-radius: 10px">
@@ -48,7 +48,7 @@ function afficherDetail(idee){
             </div>
         
         </div>
-        <div class="col-7 mt-4" style=" height: 19rem; box-shadow: 10px 12px 29px -6px #000000; border-radius: 10px">
+        <div class="col-7 mt-1" style=" height: 19rem; box-shadow: 10px 12px 29px -6px #000000; border-radius: 10px">
             <div class="row">
                 <h1 id="prenom">${idee.prenom +" "+ idee.nom}</h1>
             </div>

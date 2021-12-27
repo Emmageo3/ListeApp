@@ -154,11 +154,28 @@ select#gender{
  }
 
   
- @media(max-width: 584px){
+@media(max-width: 584px){
+
+  .section{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
  .container{
   max-width: 100%;
-}
-form .user-details .input-box{
+  box-shadow: 5px 23px 15px -15px #000000;
+  }
+  input#submit{
+    width: 100%;
+  }
+  .navbar{
+    width: 100%;
+  }
+
+  .col-md-1.btn {
+   display: none;
+  }
+  form .user-details .input-box{
     margin-bottom: 15px;
     width: 100%;
   }
@@ -171,6 +188,10 @@ form .user-details .input-box{
   }
   .user-details::-webkit-scrollbar{
     width: 5px;
+  }
+  .h1{
+    text-align: center;
+    margin-left: 1rem;
   }
   }
   @media(max-width: 459px){

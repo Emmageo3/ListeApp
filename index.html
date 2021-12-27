@@ -8,16 +8,32 @@
    </head>
 <body>
 
+  <div class="row" style="width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SchoolApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Ajouter des apprenants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="liste.html">Liste des apprenants</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
 
   <section>
     <div class= "container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-6">
-          <div class="title">Ajouter un apprenant</div>
-        </div>
-        <div class="col-6">
-          <a href="liste.html">Voir la liste des apprenants inscrits</a>
-        </div>
+      <div class="row justify-content-center align-items-center" style="text-align: center;">
+          <h1 style="text-decoration: underline;">Ajouter un apprenant</h1>
       </div>
        
         <div class="content">
@@ -66,7 +82,7 @@
               </div>
             </div>
             
-            <div class="button">
+            <div class="row button justify-content-center align-items-center" style="text-align: center; width: 100%;">
               <input id="submit" type="submit" value="Ajouter">
             </div>
           </form>
@@ -75,9 +91,9 @@
   </section><br>
 
   <div class="row align-items-center justify-content-center" style="margin-top: 4rem; width: 100%;">
-      <div class="col-1 btn" style="background-color: white; margin: 1rem;">Débutants</div>
-      <div class="col-1 btn" style="background-color: white; margin: 1rem;">Intermédiaires</div>
-      <div class="col-1 btn" style="background-color: white; margin: 1rem;">Avancés</div>
+      <div class="col-1 btn" style="background-color: grey; margin: 1rem;">Débutants</div>
+      <div class="col-1 btn" style="background-color: grey; margin: 1rem;">Intermédiaires</div>
+      <div class="col-1 btn" style="background-color: grey; margin: 1rem;">Avancés</div>
   </div>
 
 

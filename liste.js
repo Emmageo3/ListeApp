@@ -14,7 +14,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       .then((liste) => {
         liste.forEach((App) => {
             creerUneCarte(App)
-        })
+            
+            })
     })
 })
 
@@ -24,6 +25,10 @@ function creerUneCarte(idee){
     divCard.setAttribute('class', 'card justify-content-center align-items-center')
     divCard.style.width = "18rem"
     divCard.style.margin = "2rem"
+    divCard.style.background = "rgba(128, 128, 128, 0.308)"
+    divCard.style.borderRadius = "10px"
+    divCard.style.border = "none"
+    divCard.style.boxShadow = "14px 6px 15px 0px #000000"
     img = document.createElement('img')
     divCard.appendChild(img)
     img.setAttribute('class', 'card-img-top')
@@ -32,8 +37,9 @@ function creerUneCarte(idee){
     }else{
         img.src = "https://img.myloview.fr/stickers/humain-femme-personne-avatar-profil-utilisateur-vector-icon-illustration-700-80949476.jpg"
     }
-    img.style.height = "10rem"
-    img.style.width = "10rem"
+    img.style.height = "8rem"
+    img.style.width = "8rem"
+    img.style.borderRadius = "50%"
     divCardBody = document.createElement('div')
     divCard.appendChild(divCardBody)
     divCardBody.setAttribute('class', 'card-body')
@@ -52,12 +58,21 @@ function creerUneCarte(idee){
     btnAjout = document.createElement('button')
     divBtn.appendChild(btnAjout)
     btnAjout.setAttribute('class', 'col')
-    btnAjout.innerHTML = "Compétences"
+    btnAjout.setAttribute('id', idee.id)
+    btnAjout.innerHTML = "Détails"
     btnAjout.style.margin = "1rem"
     btnAjout.style.border = "none"
     btnAjout.style.background = "#ce0033"
     btnAjout.style.padding = "10px"
     btnAjout.style.borderRadius = "10px"
     btnAjout.style.color = "white"
-}
 
+    let detail = document.getElementById(idee.id)
+    detail.addEventListener('click', function(){
+      localStorage.setItem('MonId', idee.id)
+      window.location.href = "detail.html"
+    })
+
+    
+    
+}

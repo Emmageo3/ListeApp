@@ -62,18 +62,83 @@ function showApp() {
   let html = "";
   AppObj.forEach(function(element, index) {
     html += `
-      <div class="card" style="width: 18rem; margin: 2rem">
+      <div class="card" style="width: 18rem; margin: 2rem; background: rgba(128, 128, 128, 0.308); border-radius: 10px; border: none; box-shadow: 14px 6px 15px 0px #000000">
         <div class="card-body">
-          <h5 class="card-title">${element.Prenom}  ${element.Nom}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Date de naissance : ${element.Anniversaire}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Téléphone : ${element.Numéro}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Adresse : ${element.Ville}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Niveau : ${element.Niveau}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Genre : ${element.Genre}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Bio : ${element.Bio}</h6>
-          <button id="${index}"onclick="deleteNote(this.id)" class="note-btn">Supprimer</button>
-          <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn">Modifier</button>
-          <button id="${index}" onclick="addToAPI(this.id)" class="note-btn add-btn">Envoyer</button>
+          <h4 class="card-title" style="text-align: center">${element.Prenom}  ${element.Nom}</h4>
+          <hr>
+          <div class="row justify-content-center align-items-center">
+            <div class="col">
+              <h6 class="card-subtitle mb-2 text-muted">Date de naissance : </h6>
+            </div>
+            <div class="col">
+              <h6>${element.Anniversaire}</h6>
+            </div>
+            <hr>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col">
+            <h6 class="card-subtitle mb-2 text-muted">Téléphone :  </h6>
+            </div>
+            <div class="col">
+              <h6>${element.Numéro}</h6>
+            </div>
+            <hr>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col">
+            <h6 class="card-subtitle mb-2 text-muted">Adresse :  </h6>
+            </div>
+            <div class="col">
+              <h6>${element.Ville}</h6>
+            </div>
+            <hr>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col">
+            <h6 class="card-subtitle mb-2 text-muted">Niveau :  </h6>
+            </div>
+            <div class="col">
+              <h6>${element.Niveau}</h6>
+            </div>
+            <hr>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col">
+            <h6 class="card-subtitle mb-2 text-muted">Genre :  </h6>
+            </div>
+            <div class="col">
+              <h6>${element.Genre}</h6>
+            </div>
+            <hr>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col">
+            <h6 class="card-subtitle mb-2 text-muted">Bio :  </h6>
+            </div>
+            <div class="col">
+              <h6>${element.Bio}</h6>
+            </div>
+          </div>
+          
+           
+           
+           
+           
+          <hr>
+          <div class="row">
+          <div class="col">
+          <button style="background: none; border: none" id="${index}"onclick="deleteNote(this.id)" class="note-btn"><img src="img/delete.png" height="35rem" width="50rem"></button>
+          </div>
+           
+          <div class="col">
+          <button style="background: none; border: none" id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn"><img src="img/bouton-modifier.png" height="35rem" width="50rem"></button>
+          </div>
+            
+            <div class="col">
+            <button style="background: none; border: none" id="${index}" onclick="addToAPI(this.id)" class="note-btn add-btn"><img src="img/check.png" height="35rem" width="50rem"></button>
+            </div>
+            
+          </div>
         </div>
       </div>
             `;
